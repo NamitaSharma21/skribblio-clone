@@ -1,0 +1,18 @@
+{
+  "name": "skribbl-clone",
+  "version": "1.0.0",
+  "description": "Full-stack real-time multiplayer drawing and guessing game (Skribbl.io clone)",
+  "scripts": {
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build:backend": "npm run build --prefix backend",
+    "build:frontend": "npm run build --prefix frontend",
+    "build": "npm run build:backend && npm run build:frontend",
+    "start": "npm run start --prefix backend",
+    "test:e2e": "npm run test:e2e --prefix backend",
+    "install:all": "npm install --prefix backend && npm install --prefix frontend"
+  },
+  "keywords": ["skribbl", "drawing", "multiplayer", "socketio", "canvas", "react"],
+  "author": "",
+  "license": "MIT"
+}
