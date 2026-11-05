@@ -12,6 +12,8 @@ dist-ssr
 .env
 */.env
 *.env.local
+backend/.env.example
+frontend/.env.example
 
 # Logs
 npm-debug.log*
