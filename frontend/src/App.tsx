@@ -60,15 +60,11 @@ export const App: React.FC = () => {
   const [gameOverData, setGameOverData] = useState<GameOverPayload | null>(null);
   const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false);
 
-  // Check URL query parameters on initial mount for invite links (e.g., ?room=ABCD12)
-  const [urlRoomCode, setUrlRoomCode] = useState<string>('');
-  useEffect(() => {
+  // Read invite links (e.g., ?room=ABCD12) before rendering the home view.
+  const [urlRoomCode] = useState<string>(() => {
     const params = new URLSearchParams(window.location.search);
-    const roomParam = params.get('room');
-    if (roomParam) {
-      setUrlRoomCode(roomParam.toUpperCase());
-    }
-  }, []);
+    return params.get('room')?.trim().toUpperCase() || '';
+  });
 
   // Socket Event Listeners
   useEffect(() => {
