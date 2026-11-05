@@ -43,27 +43,12 @@ npm run install:all
 The backend reads `backend/.env`, and the frontend reads `frontend/.env`.
 Start with the included example files:
 
-```bash
-cp backend/.env.example backend/.env
-cp frontend/.env.example frontend/.env
-```
+
 
 On Windows Command Prompt, use `copy` instead of `cp`. Make sure the local
 settings point to each other:
 
-**`backend/.env`**
 
-```env
-PORT=5000
-NODE_ENV=development
-CLIENT_URL=http://localhost:5173
-```
-
-**`frontend/.env`**
-
-```env
-VITE_BACKEND_URL=http://localhost:5000
-```
 
 ### 3. Start the app
 
